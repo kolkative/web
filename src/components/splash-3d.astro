@@ -5,12 +5,12 @@ import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 ---
 
-<section class="relative min-h-screen flex flex-col items-center justify-center bg-transparent">
+<section class="relative h-full bg-transparent">
   <Starfield />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative w-full place-items-center gap-y-1">
+  <div class="relative flex flex-col items-center justify-center">
     <!-- Dummy 3D viewer pakai model-viewer -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <model-viewer

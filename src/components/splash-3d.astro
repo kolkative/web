@@ -15,18 +15,20 @@ import Starfield from "~/components/starfield.astro";
   <div class="relative flex flex-col items-center justify-center text-center z-10">
     <!-- Model Viewer -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <model-viewer 
-      src="LOGO_12.glb"
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      camera-controls
-      tone-mapping="neutral"
-      shadow-intensity="0.45"
-      auto-rotate
-      min-camera-orbit="auto 0deg auto"
-      max-camera-orbit="auto 0deg auto"
-      style="width: 300px; height: 300px; margin-bottom: 2rem;">
+    <model-viewer
+      src="kolkative.glb" 
+      ar 
+      ar-modes="webxr scene-viewer quick-look" 
+      camera-controls 
+      tone-mapping="neutral" poster="poster.webp" 
+      shadow-intensity="1" 
+      auto-rotate 
+      min-camera-orbit="auto 0deg auto" 
+      max-camera-orbit="auto 0deg auto" 
+      exposure="1.5" environment-image="whipple_creek_regional_park_04_1k.hdr"
+      style="width: 300px; height: 300px; margin-bottom: 2rem;>
     </model-viewer>
+
 
     <!-- Text Content -->
     <div class="text-center w-full">

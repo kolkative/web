@@ -14,6 +14,7 @@ import Starfield from "~/components/starfield.astro";
 
   <div class="relative flex flex-col items-center justify-center text-center z-10">
     <!-- Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <model-viewer src="kolkative.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.45" auto-rotate min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 0deg auto"></model-viewer>
     <!-- Text Content -->
     <div class="text-center w-full">

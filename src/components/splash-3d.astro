@@ -14,22 +14,7 @@ import Starfield from "~/components/starfield.astro";
 
   <div class="relative flex flex-col items-center justify-center text-center z-10">
     <!-- Model Viewer -->
-    <model-viewer
-      src="kolkative.glb" 
-      ar 
-      ar-modes="webxr scene-viewer quick-look" 
-      camera-controls 
-      tone-mapping="neutral" 
-      poster="poster.webp" 
-      shadow-intensity="1" 
-      auto-rotate 
-      min-camera-orbit="auto 0deg auto" 
-      max-camera-orbit="auto 0deg auto" 
-      exposure="1.5" 
-      environment-image="whipple_creek_regional_park_04_1k.hdr"
-    >
-    </model-viewer>
-
+    <model-viewer src="kolkative.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.45" auto-rotate min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 0deg auto"></model-viewer>
     <!-- Text Content -->
     <div class="text-center w-full">
       <div class="gradient-text font-extrabold tracking-tighter text-6xl md:text-8xl w-full max-w-4xl mx-auto leading-tight">

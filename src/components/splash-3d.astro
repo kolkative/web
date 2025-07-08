@@ -13,13 +13,8 @@ import Starfield from "~/components/starfield.astro";
   <div class="relative flex flex-col items-center justify-center">
     <!-- Dummy 3D viewer pakai model-viewer -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <model-viewer
-      src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-      alt="A 3D model of an astronaut"
-      auto-rotate
-      camera-controls
-      style="width: 320px; height: 320px; margin: 0 auto;"
-    ></model-viewer>
+    <model-viewer src="ImageToStl.com_LOGO_12.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.31" shadow-softness="0.35" auto-rotate min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 0deg auto"> </model-viewer>
+
     <!-- Text content centered -->
     <div class="text-center w-full">
       <div

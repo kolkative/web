@@ -5,26 +5,18 @@ import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 ---
 
-<section class="relative h-full bg-transparent">
+<section class="relative h-screen bg-transparent flex items-center justify-center">
   <Starfield />
+
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative flex flex-col items-center justify-center">
-    <!-- Dummy 3D viewer pakai model-viewer -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <model-viewer
-      src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-      alt="A 3D model of an astronaut"
-      auto-rotate
-      camera-controls
-      style="width: 320px; height: 320px; margin: 0 auto;"
-    ></model-viewer>
-    <!-- Text content centered -->
+
+  <div class="relative flex flex-col items-center justify-center text-center z-10">
+    <model-viewer src="kolkative.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 0deg auto" auto-rotate> </model-viewer>
+    <!-- Text Content -->
     <div class="text-center w-full">
-      <div
-        class="gradient-text font-extrabold tracking-tighter text-6xl md:text-8xl w-full max-w-4xl mx-auto leading-tight"
-      >
+      <div class="gradient-text font-extrabold tracking-tighter text-6xl md:text-8xl w-full max-w-4xl mx-auto leading-tight">
         Welcome to
         <br /> Kolkative
         <span class="block mt-0.5">
@@ -41,6 +33,10 @@ import Starfield from "~/components/starfield.astro";
     </div>
   </div>
 </section>
+
+<!-- Pindahkan script ke bawah -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 
 <noscript>
   <style>

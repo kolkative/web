@@ -10,6 +10,20 @@ body > div, main, section {
   min-height: 100vh;
 }
 
+/* About page specific styles - allows scrolling */
+.about-page {
+  overflow: auto !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.about-page > div, 
+.about-page main, 
+.about-page section {
+  height: auto !important;
+  min-height: auto !important;
+}
+
 /* TODO: consider creating <Button> and <GradientText> components */
 a,
 .btn {

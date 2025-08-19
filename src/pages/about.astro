@@ -1,10 +1,17 @@
 ---
 import "@fontsource-variable/inter";
-import Header from "~/components/header.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
 const description = "About Kolkative Compound — a non-profit creative media building a sustainable digital ecosystem for performing arts.";
+
+const navItems = [
+  { title: "About", url: "/about" },
+  { title: "Community", url: "https://hub.kolkative.my.id" },
+  { title: "Support", url: "http://kolkative.myr.id/support" },
+  { title: "Branding", url: "https://hub.kolkative.my.id/brand" },
+  { title: "Store", url: "https://hub.kolkative.my.id/brand" },
+];
 ---
 
 <!doctype html>
@@ -28,8 +35,33 @@ const description = "About Kolkative Compound — a non-profit creative media bu
       document.documentElement.dataset.theme = 'dark';
     </script>
   </head>
-  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
-    <Header />
+  <body class="about-page h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+    <!-- Custom Header for About Page - Top Position -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-default/95 backdrop-blur-sm border-b border-default">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8 py-4">
+        <div class="flex items-center justify-between">
+          <a class="flex items-center gap-3 hover:text-secondary transition-colors" href="/">
+            <h3 class="text-sm font-medium">Kolkative © All Right Reserved</h3>
+          </a>
+          <nav class="hidden sm:block">
+            <ul class="flex items-center gap-6">
+              {navItems.map(({ title, url }) => (
+                <li>
+                  <a class="text-sm hover:text-secondary transition-colors" href={url}>
+                    {title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <button class="sm:hidden p-2 hover:text-secondary transition-colors" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
 
     <main class="px-6 sm:px-8 py-28 md:py-36 max-w-6xl mx-auto space-y-24">
       <!-- Hero Section (First Impression) -->
@@ -48,11 +80,8 @@ const description = "About Kolkative Compound — a non-profit creative media bu
           Join us in preserving the magic of cabaret and performing arts for future generations.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://kolkative.myr.id/support" class="btn inline-flex items-center rounded-xl bg-secondary/20 text-white px-6 py-3 hover:bg-secondary/30 transition-transform duration-300 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-secondary focus-visible:outline-none hover:shadow-lg">
-            Support Us
-          </a>
           <a href="https://hub.kolkative.my.id/job" class="btn inline-flex items-center rounded-xl border border-default px-6 py-3 hover:text-white hover:border-secondary transition-transform duration-300 hover:-translate-y-0.5 active:translate-y-0 focus-visible:ring-2 focus-visible:ring-secondary focus-visible:outline-none hover:shadow-lg">
-            Join the Community
+            Go to Hub
           </a>
         </div>
         <div class="mt-12 p-8 rounded-2xl border border-default bg-gradient-to-br from-indigo-500/5 via-fuchsia-500/5 to-pink-500/5">
@@ -302,7 +331,7 @@ const description = "About Kolkative Compound — a non-profit creative media bu
               <a class="block hover:text-white transition-colors" href="/">Home</a>
               <a class="block hover:text-white transition-colors" href="/about">About</a>
               <a class="block hover:text-white transition-colors" href="/programs">Programs</a>
-              <a class="block hover:text-white transition-colors" href="https://kolkative.myr.id/support">Support</a>
+              <a class="text-sm text-offset">Support</a>
             </nav>
           </div>
           <div class="text-center md:text-right">
@@ -314,36 +343,11 @@ const description = "About Kolkative Compound — a non-profit creative media bu
           </div>
         </div>
         <div class="text-center pt-8 border-t border-default">
-          <p class="text-sm text-offset">© 2025 Kolkative Compound — Creative Media Initiative</p>
-          <p class="text-xs text-offset mt-2">Kolkative Compound is a non-profit creative media initiative.</p>
+          <p class="text-sm text-offset">Kolkative © 2025 — All Right Reserved</p>
+          <p class="text-xs text-offset mt-2">creative media initiative</p>
         </div>
       </div>
     </footer>
   </body>
 </html>
-
-<style>
-  /* Override global CSS restrictions for about page */
-  body {
-    overflow: auto !important;
-    height: auto !important;
-    min-height: auto !important;
-  }
-  
-  body > div, main, section {
-    height: auto !important;
-    min-height: auto !important;
-  }
-  
-  /* Ensure proper scrolling */
-  html {
-    overflow-y: auto !important;
-    height: auto !important;
-  }
-  
-  /* Custom styles for about page */
-  .about-page {
-    overflow: visible;
-  }
-</style>
 

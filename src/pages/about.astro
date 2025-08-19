@@ -322,3 +322,28 @@ const description = "About Kolkative Compound — a non-profit creative media bu
   </body>
 </html>
 
+<style>
+  /* Override global CSS restrictions for about page */
+  body {
+    overflow: auto !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  body > div, main, section {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* Ensure proper scrolling */
+  html {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+  
+  /* Custom styles for about page */
+  .about-page {
+    overflow: visible;
+  }
+</style>
+

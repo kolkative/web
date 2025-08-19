@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us | Kolkative Compound">
+  <section class="hero">
+    <h1>Kolkative Compound</h1>
+    <p>Building a Digital Ecosystem for Performing Arts</p>
+    <a href="/support" class="cta">Support Us</a>
+  </section>
+
+  <section class="about">
+    <h2>Who We Are</h2>
+    <p>
+      Kolkative Compound is a non-profit creative media dedicated to building a 
+      sustainable digital ecosystem for performing arts, especially cabaret. 
+      We believe art should be accessible and enjoyed together.
+    </p>
+  </section>
+
+  <section class="mission">
+    <h2>Mission & Vision</h2>
+    <ul>
+      <li>📌 Documentation & Archiving</li>
+      <li>🤝 Collaboration & Community Building</li>
+      <li>🌍 Accessibility & Inclusion</li>
+      <li>✨ Sustainability of Performing Arts</li>
+    </ul>
+  </section>
+
+  <section class="programs">
+    <h2>What We Do</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cabaret Leaderboard</h3>
+        <p>Appreciating and celebrating the best teams in cabaret.</p>
+      </div>
+      <div class="card">
+        <h3>Creative Media Hub</h3>
+        <p>Publishing, documenting, and sharing creative works.</p>
+      </div>
+      <div class="card">
+        <h3>Open Collaboration</h3>
+        <p>Providing a space for artists and communities to collaborate.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <h2>Our Impact</h2>
+    <p>Over 50+ cabaret teams documented, 1000+ audience reached, and growing!</p>
+  </section>
+
+  <section class="support">
+    <h2>Support & Contribution</h2>
+    <p>
+      We run everything without investors or rate cards — fully community-driven.
+      You can support us with donations, goods, time, or creative ideas.
+    </p>
+    <a href="/donate" class="cta">Contribute Now</a>
+  </section>
+
+  <section class="get-involved">
+    <h2>Get Involved</h2>
+    <p>
+      Join as a volunteer in Creative, Production, or Marcomm. Or collaborate 
+      with us to keep the spirit of performing arts alive.
+    </p>
+    <a href="/volunteer" class="cta">Join Us</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Kolkative Compound — Non-profit Creative Media Initiative</p>
+    <nav>
+      <a href="/">Home</a> | <a href="/about">About</a> | 
+      <a href="/programs">Programs</a> | <a href="/support">Support</a>
+    </nav>
+  </footer>
+</Layout>
+
+<style>
+  section { padding: 4rem 2rem; max-width: 800px; margin: auto; }
+  .hero { text-align: center; padding: 6rem 2rem; background: #111; color: #fff; }
+  .cta { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #0070f3; color: white; border-radius: 8px; text-decoration: none; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+  .card { background: #f5f5f5; padding: 1rem; border-radius: 8px; }
+  .footer { text-align: center; padding: 2rem; background: #222; color: #aaa; }
+  .footer a { color: #fff; margin: 0 0.5rem; text-decoration: none; }
+</style>

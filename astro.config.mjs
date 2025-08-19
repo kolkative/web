@@ -9,10 +9,13 @@ export default defineConfig({
     tailwind(),
     preact(),
   ],
+  output: 'static',
+  build: {
+    assets: '_assets',
+  },
   vite: {
     ssr: {
       external: ["svgo"],
     },
   },
- 
 });

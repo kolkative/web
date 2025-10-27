@@ -1,0 +1,33 @@
+---
+const { title = "Kolkative", description = "", children } = Astro.props;
+---
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="p-4 shadow-md bg-gray-100">
+      <nav class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-bold">Kolkative</a>
+        <ul class="flex gap-6 text-sm font-medium">
+          <li><a href="/">Home</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/event">Event</a></li>
+          <li><a href="/store">Store</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-4">
+      <slot />
+    </main>
+
+    <footer class="p-4 text-center text-sm text-gray-500">
+      © {new Date().getFullYear()} Kolkative
+    </footer>
+  </body>
+</html>

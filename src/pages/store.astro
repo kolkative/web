@@ -1,12 +1,16 @@
 ---
-import StoreProductList from '../components/StoreProductList.tsx';
+import Layout from "../layouts/BaseLayout.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { getCollection } from "astro:content";
+
+const products = await getCollection("products");
 ---
-<html>
-  <head>
-    <title>Store Kolkative</title>
-  </head>
-  <body class="min-h-screen bg-default text-default">
-    <h1 class="text-3xl font-bold mb-8 text-center">Store Kolkative</h1>
-    <StoreProductList />
-  </body>
-</html> 
+
+<Layout title="Store">
+  <h1 class="text-3xl font-bold mb-6">KolKative Store</h1>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    {products.map(({ data }) => (
+      <ProductCard product={data} />
+    ))}
+  </div>
+</Layout>

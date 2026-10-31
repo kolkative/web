@@ -3,7 +3,7 @@
 </div>
 
 <script>
-  const STAR_COUNT = 800;
+  const STAR_COUNT = 180;
   const SPEED = 0.1;
 
   class Star {
@@ -39,7 +39,7 @@
     }
 
     draw(context: CanvasRenderingContext2D) {
-      context.lineWidth = this.z;
+      context.lineWidth = Math.max(this.z, 0.35);
       context.beginPath();
       context.moveTo(this.x, this.y);
       context.lineTo(this.previousX, this.previousY);

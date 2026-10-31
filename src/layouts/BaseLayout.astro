@@ -1,4 +1,6 @@
 ---
+import "../styles/index.css";
+
 const { title = "Kolkative", description = "", children } = Astro.props;
 ---
 <html lang="id">
@@ -7,9 +9,8 @@ const { title = "Kolkative", description = "", children } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="stylesheet" href="/styles/global.css" />
   </head>
-  <body class="bg-white text-gray-900">
+  <body>
     <header class="p-4 shadow-md bg-gray-100">
       <nav class="max-w-5xl mx-auto flex justify-between items-center">
         <a href="/" class="text-xl font-bold">Kolkative</a>

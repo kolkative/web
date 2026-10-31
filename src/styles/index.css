@@ -1,0 +1,63 @@
+html {
+  min-height: 100%;
+  background: #050816;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  color: #f4f3ff;
+  background: transparent;
+}
+
+body::before,
+body::after {
+  position: fixed;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+body::before {
+  z-index: -2;
+  background-color: #050816;
+  background-image:
+    radial-gradient(1px 1px at 8% 12%, #fff 99%, transparent),
+    radial-gradient(1px 1px at 23% 68%, #d7ddff 99%, transparent),
+    radial-gradient(2px 2px at 44% 34%, #fff 99%, transparent),
+    radial-gradient(1px 1px at 61% 83%, #cbd5ff 99%, transparent),
+    radial-gradient(1px 1px at 79% 19%, #fff 99%, transparent),
+    radial-gradient(2px 2px at 92% 57%, #e1d7ff 99%, transparent);
+  background-size: 360px 360px;
+  animation: star-drift 100s linear infinite;
+}
+
+body::after {
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 18% 24%, rgb(66 52 160 / 22%), transparent 48%),
+    radial-gradient(ellipse at 82% 68%, rgb(29 86 144 / 20%), transparent 46%),
+    radial-gradient(ellipse at 55% 8%, rgb(115 45 130 / 12%), transparent 42%);
+  background-size: 140% 140%;
+  animation: nebula-drift 28s ease-in-out infinite alternate;
+}
+
+@keyframes star-drift {
+  to {
+    background-position: 360px 180px;
+  }
+}
+
+@keyframes nebula-drift {
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}

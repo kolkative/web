@@ -1,0 +1,60 @@
+---
+import "@fontsource-variable/inter";
+import Starfield from "../components/starfield.astro";
+import "../styles/index.css";
+
+const navItems = [
+  { title: "About", url: "/about" },
+  { title: "Community", url: "https://hub.kolkative.com" },
+  { title: "Support", url: "http://kolkative.myr.id/support" },
+  { title: "Branding", url: "https://hub.kolkative.com/brand" },
+  { title: "Store", url: "https://store.kolkative.com" },
+];
+---
+
+<!doctype html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/kolkative-favicon.png" />
+    <link rel="shortcut icon" href="/kolkative-favicon.ico" />
+    <title>Kolkative</title>
+    <meta name="description" content="Media Informasi dan Apresiasi" />
+  </head>
+  <body class="home-page">
+    <main class="landing-hero">
+      <Starfield />
+      <div class="hero-content">
+        <model-viewer
+          src="/kolkative.glb"
+          alt="Kolkative"
+          camera-controls
+          tone-mapping="neutral"
+          min-camera-orbit="auto 0deg auto"
+          max-camera-orbit="auto 0deg auto"
+          auto-rotate
+        ></model-viewer>
+        <div class="hero-title">
+          Welcome to
+          <br /> Kolkative
+          <span class="hero-action">
+            <a href="https://hub.kolkative.com" target="_blank" rel="noopener">
+              GO TO HUB
+            </a>
+          </span>
+        </div>
+      </div>
+    </main>
+    <footer class="home-footer">
+      <a class="home-copyright" href="/">Kolkative © All Right Reserved</a>
+      <nav aria-label="Main navigation">
+        {navItems.map(({ title, url }) => <a href={url}>{title}</a>)}
+      </nav>
+    </footer>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+  ></script>
+</html>

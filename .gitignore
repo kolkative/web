@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # build output
 dist/
 
@@ -19,3 +20,15 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+=======
+node_modules/
+dist/
+.astro/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+>>>>>>> 951bd502f8672f58c5fc1a173eab2d569e0ca4f4
